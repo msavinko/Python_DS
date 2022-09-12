@@ -16,8 +16,6 @@ python3 -m pip install termgraph
 
 
 
-
-
 Обновить пип
 /Users/marlean/Desktop/Python_DS/Day03/ex01/virtual/marlean/bin/python3 -m pip install --upgrade pip
 

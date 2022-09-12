@@ -5,12 +5,12 @@
 # mkdir virtual
 # cd virtual
 
-Создать виртуальное окружение
-# python3 -m venv marlean
+#Создать виртуальное окружение
+python3 -m venv marlean
 
-Активировать виртуальное окружение
-# cd marlean/bin
-# source activate
+#Активировать виртуальное окружение
+cd marlean/bin
+source activate
 
 Запустить код, который выводит pwd
 # cd ../include

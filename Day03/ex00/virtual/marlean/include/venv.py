@@ -1,11 +1,4 @@
-# pip3 install virtualenv
-# mkdir virtual
-# python3 -m venv marlean
-# cd bin
-# source activate
-# cd ../include
-# python3 venv.py
-# deactivate
+#!/usr/bin/env python3
 
 import os
 

@@ -32,25 +32,10 @@ def parse_info():
 	for i in elements:
 		if i.find('div', attrs={'title' : sys.argv[2]}) is not None:
 			cols = i.find_all('div', attrs={'data-test' : 'fin-col'})
-
-			# my_list = list()
-			
-			# result = [l + (''.join(l),) for l in list]
-			i = 0
-			for j in cols:
-				my_list.insert(i, j.text)
-				i = i + 1
-			
-			# return tuple([sys.argv[2], *[j.text for j in cols]])
-			return tuple(sys.argv[2], my_list)
+			my_list = [col.text for col in cols]
+			return tuple([sys.argv[2], *my_list]) # звездочка убирает квадратные скобки
 	print("statement name is not found")
 	exit(1)
-
-# def main():
-	
-
-
-
 
 if __name__ == '__main__':
 	if len(sys.argv) != 3:
@@ -62,4 +47,4 @@ if __name__ == '__main__':
 	if info is None:
 		print('Invalid info')
 		exit(1)
-	print(info)
+	print(sys.argv[2], info)

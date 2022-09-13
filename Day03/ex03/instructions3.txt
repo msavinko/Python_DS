@@ -17,3 +17,6 @@ https://realpython.com/beautiful-soup-web-scraper-python/
 
 
 Cmd+Opt+I - Inspect page
+
+Конструктор генератор списков
+https://pythonworld.ru/tipy-dannyx-v-python/spiski-list-funkcii-i-metody-spiskov.html

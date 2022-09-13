@@ -47,4 +47,4 @@ if __name__ == '__main__':
 	if info is None:
 		print('Invalid info')
 		exit(1)
-	print(sys.argv[2], info)
+	print(info)

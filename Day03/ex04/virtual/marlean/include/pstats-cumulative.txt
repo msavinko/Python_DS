@@ -1,0 +1,20 @@
+~ Let's parse finance.yahoo webpage ~
+~ Success ~
+
+('Total Revenue', '198,270,000', '198,270,000', '168,088,000', '143,015,000', '125,843,000')
+~ Let's parse finance.yahoo webpage ~
+~ Success ~
+
+         141910 function calls (141881 primitive calls) in 0.787 seconds
+
+   Ordered by: cumulative time
+   List reduced from 592 to 5 due to restriction <5>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.787    0.787 /Users/marlean/Desktop/Python_DS/Day03/ex04/virtual/marlean/include/./financial_enhanced.py:8(parse_info)
+        1    0.000    0.000    0.698    0.698 /Users/marlean/Desktop/Python_DS/Day03/ex02/virtual/marlean/lib/python3.9/site-packages/requests/api.py:62(get)
+        1    0.000    0.000    0.698    0.698 /Users/marlean/Desktop/Python_DS/Day03/ex02/virtual/marlean/lib/python3.9/site-packages/requests/api.py:14(request)
+        1    0.000    0.000    0.696    0.696 /Users/marlean/Desktop/Python_DS/Day03/ex02/virtual/marlean/lib/python3.9/site-packages/requests/sessions.py:500(request)
+        1    0.000    0.000    0.694    0.694 /Users/marlean/Desktop/Python_DS/Day03/ex02/virtual/marlean/lib/python3.9/site-packages/requests/sessions.py:671(send)
+
+

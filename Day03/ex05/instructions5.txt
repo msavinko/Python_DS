@@ -1,0 +1,25 @@
+Unit tests
+
+
+https://habr.com/ru/post/448782/
+
+
+Установка pytest
+
+$ pip3 install -U virtualenv
+$ python3 -m virtualenv venv
+$ source venv/bin/activate
+$ pip install pytest
+
+
+написание тестов
+https://habr.com/ru/post/448788/
+
+
+
+
+'MSFT' 'Total Revenue'
+
+*** run the code ***
+pytest <filename>
+

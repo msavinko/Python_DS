@@ -1,0 +1,28 @@
+Google colab
+
+https://sky.pro/media/google-colab/
+https://evogeek.ru/questions/66055111/
+
+
+Pandas - библиотека для анализа данных
+самые главные структуры данных библиотеки: DataFrame и Series
+
+
+Подключение SQLite 
+https://pythonru.com/biblioteki/vvedenie-v-sqlite-python
+
+SQLite online
+https://sqliteonline.com/
+
+
+
+Task
+choose the columns you need
+choose the rows you need
+
+
+
+*********
+Rush00
+https://movielens.org/movies/
+marleanmovie

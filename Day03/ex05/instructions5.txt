@@ -23,3 +23,6 @@ https://habr.com/ru/post/448788/
 *** run the code ***
 pytest <filename>
 
+ptyhon assert 
+Assertion — это проверка, которую можно включить, а затем выключить, завершив тестирование программы.
+https://pythonru.com/uroki/35-instrukcija-assert-dlja-nachinajushhih

@@ -17,5 +17,10 @@ awk 'BEGIN { FS = OFS = "," }
                 JUN "\n\"Middle\"", 
                 MID "\n\"Senior\"", SEN }
     ') | \
-    sort -t',' -nk2\
+    sort -t',' -nrk2\
     >>  hh_uniq_positions.csv
+
+#-t delimeter
+# -n as number
+# -r revers sort
+# -k2 col2 to be sorted

@@ -1,0 +1,13 @@
+*** Data Type ***
+
+https://www.w3schools.com/python/python_datatypes.asp
+https://pythonworld.ru/tipy-dannyx-v-python
+
+*** Read and Write ***
+
+https://www.w3schools.com/python/python_file_handling.asp#gsc.tab=0
+https://pythonworld.ru/tipy-dannyx-v-python/fajly-rabota-s-fajlami.html
+
+*** Import sys ***
+
+https://pythonworld.ru/moduli/modul-sys.html

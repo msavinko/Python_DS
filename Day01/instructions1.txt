@@ -7,7 +7,13 @@ https://pythonworld.ru/tipy-dannyx-v-python
 
 https://www.w3schools.com/python/python_file_handling.asp#gsc.tab=0
 https://pythonworld.ru/tipy-dannyx-v-python/fajly-rabota-s-fajlami.html
+https://docs-python.ru/tutorial/vstroennye-funktsii-interpretatora-python/funktsija-open/
 
 *** Import sys ***
 
 https://pythonworld.ru/moduli/modul-sys.html
+
+*** Словари и методы ***
+https://pythonworld.ru/tipy-dannyx-v-python/slovari-dict-funkcii-i-metody-slovarej.html
+https://tproger.ru/explain/python-dictionaries/
+

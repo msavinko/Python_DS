@@ -17,3 +17,7 @@ https://pythonworld.ru/moduli/modul-sys.html
 https://pythonworld.ru/tipy-dannyx-v-python/slovari-dict-funkcii-i-metody-slovarej.html
 https://tproger.ru/explain/python-dictionaries/
 
+# Про контекстный менеджер with:
+# https://pythononline.ru/osnovy/operator-with-python-menedzhery-konteksta
+# Чтение из файла и запись в файл:
+# https://pythonru.com/osnovy/fajly-v-python-vvod-vyvod

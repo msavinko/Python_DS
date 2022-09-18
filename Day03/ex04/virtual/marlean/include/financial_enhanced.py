@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import sys
 import time
 import requests
-#import httpx
+# import httpx
 
 def parse_info():
 
@@ -13,7 +13,9 @@ def parse_info():
 
 	url = f'https://finance.yahoo.com/quote/{sys.argv[1]}/financials'
 	headers={'User-Agent': 'Custom user agent'}
-	website = requests.get(url, headers=headers) #CHANGE requests to httpx  FOR #3 TEST
+	website = requests.get(url, headers=headers)
+	# website = httpx.get(url)
+	#CHANGE requests to httpx  FOR #3 TEST change sintax!!!
 
 	if website.status_code != 200:
 		print('Page is not found')

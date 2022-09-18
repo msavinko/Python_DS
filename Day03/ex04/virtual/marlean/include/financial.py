@@ -37,7 +37,6 @@ if __name__ == '__main__':
 		print('Wrong num of arg')
 		exit(1)
 	
-	
 	info = parse_info()
 	if info is None:
 		print('Invalid info')

@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import sys
 import time
 import requests
+#import httpx
 
 def parse_info():
 
@@ -12,7 +13,7 @@ def parse_info():
 
 	url = f'https://finance.yahoo.com/quote/{sys.argv[1]}/financials'
 	headers={'User-Agent': 'Custom user agent'}
-	website = requests.get(url, headers=headers)
+	website = requests.get(url, headers=headers) #CHANGE requests to httpx  FOR #3 TEST
 
 	if website.status_code != 200:
 		print('Page is not found')
@@ -21,7 +22,7 @@ def parse_info():
 
 	# Создаем BeautifulSoup объект, который принимает Текст с веб страницы.
 	# Используем встроенный в Питон парсер built-in HTML parser
-	soup = BeautifulSoup(website.text, 'html.parser') #CHANGE 'html.parser' to 'lxml' PARSER FOR #3 TEST
+	soup = BeautifulSoup(website.text, 'html.parser') 
 	# Находим элементы по HTML атрибутам на странице. берем целую строку fin-row
 	elements = soup.find_all('div', attrs={'data-test' : 'fin-row'})
 	for i in elements:

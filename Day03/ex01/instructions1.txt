@@ -5,8 +5,6 @@ https://xakep.ru/2018/09/14/www-termgraph/
 https://github.com/mkaz/termgraph
 https://pypi.org/project/termgraph/
 
-# Установка библиотеки colorama
-# pip install colorama
 
 Установка библиотеки termgraph
 python3 -m pip install termgraph
@@ -20,3 +18,20 @@ python3 -m pip install termgraph
 /Users/marlean/Desktop/Python_DS/Day03/ex01/virtual/marlean/bin/python3 -m pip install --upgrade pip
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+не надо
+# Установка библиотеки colorama
+# pip install colorama

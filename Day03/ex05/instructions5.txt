@@ -26,3 +26,5 @@ pytest <filename>
 ptyhon assert 
 Assertion — это проверка, которую можно включить, а затем выключить, завершив тестирование программы.
 https://pythonru.com/uroki/35-instrukcija-assert-dlja-nachinajushhih
+
+

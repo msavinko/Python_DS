@@ -4,7 +4,7 @@ import logging
 import json
 import requests
 
-	# Отправим сообщение в телеграмм
+#SEND MESSAGE IN TELEGRAMM
 def send_in_telegramm(text):
 	token = "5691524988:AAGDKJYWTjEdo0AfwlyP-WUv9oA37AreoFI"
 	chat_id = "267644912"
@@ -20,13 +20,13 @@ def check_arg(file_name):
 		line = file.readlines()
 		# Если пустой файл или одна строка, но не с нужными значениями, то исключение
 		if len(line) == 0 or (len(line) == 1 and (line[0] != '0,1\n' and line[0] != '1,0\n')):
-			send_in_telegramm('The report hasn’t been created due to an error')
+			send_in_telegramm('The report hasn\'t been created due to an error')
 			raise Exception("Error argument")
 		# Проверяем остальные строки на нужные значения
 		if len(line) > 1:
 			for i in range(1, len(line) - 1):
 				if line[i] != '0,1\n' and line[i] != '1,0\n':
-					send_in_telegramm('The report hasn’t been created due to an error')
+					send_in_telegramm('The report hasn\'t been created due to an error')
 					raise Exception("Error argument")
 
 # У меня на машине для правильного запуска надо запустить виртуальную машину,
@@ -44,7 +44,7 @@ def main():
 						filemode='w',
 						level=logging.DEBUG)
 	if check_arg(FILEPATH):
-		send_in_telegramm('The report hasn’t been created due to an error')
+		send_in_telegramm('The report hasn\'t been created due to an error')
 		raise Exception("Error argument")
 	output = Research(FILEPATH).file_reader()
 	element = Research.Calculations(output)

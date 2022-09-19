@@ -22,21 +22,34 @@ class Research:
 	
 	#WE ADD CONSTRUCTOR TO THE CALUCULATIONS CLASS
 	class Calculations:
+		def __init__(self, data):
+			self.data = data 
+			self.count = self.counts()
+			self.fractions = self.fractions()
 
-		def counts(list_lists):
-			heads = 0
-			tails = 0
-			for i in range(len(list_lists)):
-				if list_lists[i][0] == 1:
-					heads += 1
-				else: 
-					tails += 1
-			return (heads, tails)
+		def counts(self):
+			x = [x[0] for x in self.data]
+			y = [y[1] for y in self.data]
+			return [sum(x), sum(y)]
 
-		def fractions(list_counts):
-			sum = list_counts[0] + list_counts[1]
-			return (list_counts[0] / sum, list_counts[1] / sum)
+		def fractions(self):
+			return [(self.count[0] / (self.count[0] + self.count[1])) * 100,
+					(self.count[1] / (self.count[0] + self.count[1])) * 100]
 
+	class Analytics(Calculations):
+		def __init__(self, data):
+			self.data = data 
+			self.count = self.counts()
+			self.fractions = self.fractions()
+
+		def counts(self):
+			x = [x[0] for x in self.data]
+			y = [y[1] for y in self.data]
+			return [sum(x), sum(y)]
+
+		def fractions(self):
+			return [(self.count[0] / (self.count[0] + self.count[1])) * 100,
+					(self.count[1] / (self.count[0] + self.count[1])) * 100]
 
 def check_arg(file_name):
 	try:
@@ -61,9 +74,13 @@ if __name__ == '__main__':
 	except Exception as e: 
 		print(e)
 	else:
-		list_lists = Research(sys.argv[1]).file_reader()
-		print(list_lists)
-		list_counts = Research.Calculations.counts(list_lists)
-		print(list_counts[0], list_counts[1])
-		list_fractions = Research.Calculations.fractions(list_counts)
-		print(list_fractions[0], list_fractions[1])
+		rsch = Research(sys.argv[1])
+		output = Research(sys.argv[1]).file_reader()
+		element = Research.Calculations(output)
+		fractions = Research.Calculations.fractions(element)
+		print(element.data)
+		print(element.count[0], element.count[1])
+		print(round(fractions[0], 2), round(fractions[1], 2))
+		print(rsch.Analytics.predict_random(rsch, 3))
+		predict_last = Research.Analytics(output)
+		print(predict_last.predict_last(output))

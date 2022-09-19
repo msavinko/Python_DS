@@ -9,7 +9,7 @@ class Research:
 		with open(self.file_name, 'r') as file:
 			line = file.readlines()
 			if line[0] == '0,1\n' or line[0] == '1,0\n':
-				self.has_header = False # does not have header
+				has_header = False # does not have header
 			start_line = 0
 			if has_header == True: #has header
 				start_line = 1

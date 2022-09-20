@@ -8,6 +8,8 @@ https://pypi.org/project/termgraph/
 
 Установка библиотеки termgraph
 python3 -m pip install termgraph
+OR
+pip3 install termgraph
 
 запустить скрипт
 ./pies_bars.sh

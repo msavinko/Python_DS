@@ -9,8 +9,7 @@
 python3 -m venv marlean
 
 #Активировать виртуальное окружение
-cd marlean/bin
-source activate
+source marlean/bin/activate
 
 Запустить код, который выводит pwd
 # cd ../include

@@ -6,12 +6,15 @@ def main():
 	if os.getenv("VIRTUAL_ENV") is None:
 		print('You are not in the Virtual Environment')
 	else:
-		print('Virtual Environment is OK')
-		os.system("pip3 install beautifulsoup4 PyTest")
-		os.system("pip3 freeze > requirements.txt")
+		envrn = os.getenv("VIRTUAL_ENV")
+		if envrn.endswith('marlean'):
+			print('Virtual Environment is OK')
+			os.system("pip3 install beautifulsoup4 PyTest")
+			os.system("pip3 freeze > requirements.txt")
+		else:
+			print('Virtual Environment is different')
 if __name__ == '__main__':
 	main()
-
 
 
 # #!/usr/bin/env python3

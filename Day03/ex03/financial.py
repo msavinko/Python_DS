@@ -17,12 +17,12 @@ def parse_info():
 	# OR
 	url = f'https://finance.yahoo.com/quote/{sys.argv[1]}/financials'
 	headers={'User-Agent': 'Custom user agent'}
-	website = requests.get(url, headers=headers)
-
+	try:
+		website = requests.get(url, headers=headers)
+	except:
+		print('Wrong URL')
 	if website.status_code != 200:
-		print('Page is not found')
-		exit(1)
-		#raise Exception!!!!
+		raise Exception('Page is not found')
 	print('~ Success ~\n')
 
 	# Создаем BeautifulSoup объект, который принимает Текст с веб страницы.
@@ -36,17 +36,13 @@ def parse_info():
 			cols = i.find_all('div', attrs={'data-test' : 'fin-col'})
 			my_list = [col.text for col in cols]
 			return tuple([sys.argv[2], *my_list]) # звездочка убирает квадратные скобки
-	print("statement name is not found")
-	exit(1)
+	raise Exception("statement name is not found")
 
 if __name__ == '__main__':
 	if len(sys.argv) != 3:
-		print('Wrong num of arg')
-		exit(1)
-	
-	
-	info = parse_info()
-	if info is None:
+		raise Exception('Wrong num of arg')
+
+	try:
+		print(parse_info())
+	except:
 		print('Invalid info')
-		exit(1)
-	print(info)

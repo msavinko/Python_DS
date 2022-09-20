@@ -30,4 +30,4 @@ python3 -m cProfile -s time financial_enhanced.py 'MSFT' 'Total Revenue' > profi
 python3 -m cProfile -s ncalls financial_enhanced.py 'MSFT' 'Total Revenue' > profiling-ncalls.txt
 
 #5 run this code
-python3 -m cProfile financial_enhanced.py 'MSFT' 'Total Revenue' > pstats-cumulative.txt
+python3 financial_enhanced.py 'MSFT' 'Total Revenue' > pstats-cumulative.txt

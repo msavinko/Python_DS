@@ -19,11 +19,11 @@ def func_compr():
 def func_map():
 	emails = ['john@gmail.com', 'james@gmail.com', 'alice@yahoo.com', 'anna@live.com', 'philipp@gmail.com']
 	emails *= 5
-	new_emails = map(lambda x: x if (element.find('@gmail.com')) else None , emails)
+	new_emails = list(map(lambda x: x if (x.find('@gmail.com') != -1) else None , emails))
 	return new_emails
 
 def my_time(func_name):
-	times = timeit.timeit(func_name, number = 90000000)
+	times = timeit.timeit(func_name, number = 90)
 	return times
 	
 if __name__ == '__main__':

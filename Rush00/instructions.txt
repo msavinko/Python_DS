@@ -1,0 +1,25 @@
+# allowed lib
+
+os, sys, urllib, requests, beautifulsoup, json,
+pytest, collections, functools, datetime, re
+
+#we need to install venv:
+python3 -m venv marlean_rush00
+source marlean_rush00/bin/activate
+
+#activate it
+
+#install jupyter
+pip3 install jupyter
+jupyter notebook
+
+#install pytest
+pip3 install pytest
+
+# RUN THIS CODE TO ACTIVATE THE ENV
+# python3 -m venv marlean_rush00 && source marlean_rush00/bin/activate && pip3 install jupyter && pip3 install pytest && /Users/marlean/Desktop/Python_DS/Rush00/marlean_rush00/bin/python3 -m pip install --upgrade pip
+
+
+1.METHOD RETURN CORRECT DATA TYPE
+2.LISTS ELEMETS HAVE THE CORRECT DATA TYPES
+3.RETURNED DATA SORTED CORRECTLY

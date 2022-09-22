@@ -3,6 +3,7 @@
 
 # RUN THE TESTS WIHT THIS COMMAND
 # pytest movielens_analysis.py
+import string
 from tags import *
 from links import *
 import sys
@@ -35,31 +36,39 @@ if __name__ == "__main__":
 		main()
 	except Exception as err:
 		print(err)
-
+class Test:
 #1.METHOD OF TAGS RETURN CORRECT DATA TYPE
-def test_tags_dt_most_words():
-	tag_data = Tags('tags.csv')
-	test_teg = Tags.most_words(tag_data, 21)
-	assert type(test_teg) is dict
+	def test_tags_dt_most_words():
+		tag_data = Tags('tags.csv')
+		test_teg = Tags.most_words(tag_data, 21)
+		assert type(test_teg) is dict
 
-def test_tags_dt_longest():
-	tag_data = Tags('tags.csv')
-	test_teg = Tags.longest(tag_data, 21)
-	assert type(test_teg) is list
+	def test_tags_dt_longest():
+		tag_data = Tags('tags.csv')
+		test_teg = Tags.longest(tag_data, 21)
+		assert type(test_teg) is list
 
-def test_tags_dt_most_words_and_longest():
-	tag_data = Tags('tags.csv')
-	test_teg = Tags.most_words_and_longest(tag_data, 21)
-	assert type(test_teg) is list
+	def test_tags_dt_most_words_and_longest():
+		tag_data = Tags('tags.csv')
+		test_teg = Tags.most_words_and_longest(tag_data, 21)
+		assert type(test_teg) is list
 
-def test_tags_dt_most_popular():
-	tag_data = Tags('tags.csv')
-	test_teg = Tags.most_popular(tag_data, 21)
-	assert type(test_teg) is dict
+	def test_tags_dt_most_popular():
+		tag_data = Tags('tags.csv')
+		test_teg = Tags.most_popular(tag_data, 21)
+		assert type(test_teg) is dict
 
-def test_tags_dt_tags_with():
-	tag_data = Tags('tags.csv')
-	test_teg = Tags.tags_with(tag_data, 'travel')
-	assert type(test_teg) is list
+	def test_tags_dt_tags_with():
+		tag_data = Tags('tags.csv')
+		test_teg = Tags.tags_with(tag_data, 'travel')
+		assert type(test_teg) is list
 
 # 2.LISTS ELEMETS HAVE THE CORRECT DATA TYPES
+# def test_el_longest():
+# 	tag_data = Tags('tags.csv')
+# 	test_teg = Tags.longest(tag_data, 21)
+# 	correct = True
+# 	for teg in test_teg:
+# 		if not isinstance()
+
+# 	assert correct

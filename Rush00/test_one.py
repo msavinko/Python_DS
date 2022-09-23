@@ -4,12 +4,13 @@ from tags import Tags
 from links import Links
 from collections import Counter
 
+path = '/Users/marlean/goinfre/ml-latest-small/'
 class Tests:
 	def setup_class(self):
-		self.movies = Movies('ml-latest-small/movies.csv')
-		self.rating = Ratings('ml-latest-small/ratings.csv')
-		self.tags = Tags('ml-latest-small/tags.csv')
-		self.links = Links('ml-latest-small/links.csv')
+		self.movies = Movies(path + 'movies.csv')
+		self.rating = Ratings(path + 'ratings.csv')
+		self.tags = Tags(path + 'tags.csv')
+		self.links = Links(path + 'links.csv')
 
 	def test_movies_dist_by_release(self):
 		result = self.movies.dist_by_release()

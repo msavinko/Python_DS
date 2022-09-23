@@ -7,16 +7,16 @@ from collections import Counter
 class Tags:
 	__rows = list()
 	
-	def __init__(self, path_to_the_file) -> None:
+	def __init__(self, path_to_the_file: str) -> None:
 		self.path_to_the_file = path_to_the_file
-		if path_to_the_file != 'tags.csv':
+		if not path_to_the_file.endswith("tags.csv"):
 			raise Exception("Wrong file. Need tags.csv")
 		with open(path_to_the_file, mode='r') as fin:
 			if os.access(path_to_the_file, os.R_OK):
 				self.__rows = fin.readlines()
 			else:
 				raise Exception("Can't open file")
-	
+
 	def most_words(self, n):
 		"""
 		The method returns top-n tags with most words inside. It is a dict 
@@ -84,7 +84,7 @@ class Tags:
 		"""
 		
 		uniq_tags = set([i.split(",")[2] for i in self.__rows[1:]])
-		splited_uniq_tags = [re.split("\s|[:/']", i) for i in uniq_tags]
+		splited_uniq_tags = [re.split("\\s|[:/']", i) for i in uniq_tags]
 		
 		for i in range(0, len(splited_uniq_tags)):
 			for j in range(0, len(splited_uniq_tags[i])):

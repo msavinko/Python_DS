@@ -1,7 +1,7 @@
 from collections import Counter, defaultdict
 from functools import reduce, lru_cache
 from datetime import datetime
-from typing_extensions import runtime
+# from typing_extensions import runtime
 
 from bs4 import BeautifulSoup
 import requests
@@ -626,17 +626,18 @@ class Tags:
 #-------------------------------#
 #          Tests class          #
 #-------------------------------#
-
+path = '/Users/marlean/goinfre/ml-latest-small/'
 class Tests:
 	"""Tests class
 	"""
 	class TestMovies:
 		"""Tests for Movies class
 		"""
+		
 
 		@classmethod
 		def setup_class(cls):
-			cls.mov = Movies('./ml-latest-small/movies.csv')
+			cls.mov = Movies(path + 'movies.csv')
 
 		def test__dist_by_release_sorted(self):
 			result = self.mov.dist_by_release()
@@ -693,8 +694,8 @@ class Tests:
 	class TestLinks:
 		@classmethod
 		def setup_class(cls):
-			INPUT_FILE = './ml-latest-small/links.csv'
-			OUTPUT_FILE = './ml-latest-small/micro_links.csv'
+			INPUT_FILE = path + 'links.csv'
+			OUTPUT_FILE = path + 'micro_links.csv'
 			
 			# create micro dataset
 			with open(INPUT_FILE, 'r', encoding='utf-8') as input_file:
@@ -702,7 +703,7 @@ class Tests:
 					for i in range(11):
 						output_file.write(input_file.readline())
    
-			cls.mov = Movies('./ml-latest-small/movies.csv')
+			cls.mov = Movies(path + 'movies.csv')
 			cls.links = Links(OUTPUT_FILE, cls.mov)
 
 		def test__get_imdb__types(self):
@@ -894,8 +895,8 @@ class Tests:
 		"""
 		@classmethod
 		def setup_class(cls):
-			cls.ratings = Ratings('ml-latest-small/ratings.csv')
-			cls.mov = Movies('./ml-latest-small/movies.csv')
+			cls.ratings = Ratings(path + 'ratings.csv')
+			cls.mov = Movies(path + 'movies.csv')
 			cls.ratings_movies = Ratings.Movies(cls.ratings, cls.mov)
 			cls.ratings_users = Ratings.Users(cls.ratings, cls.mov)
 
@@ -1187,7 +1188,7 @@ class Tests:
 
 		@classmethod
 		def setup_class(cls):
-			cls.tags = Tags('./ml-latest-small/tags.csv')
+			cls.tags = Tags(path + 'tags.csv')
 
 		def test__most_words__types(self):
 			result = self.tags.most_words(10)

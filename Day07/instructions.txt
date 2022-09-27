@@ -1,0 +1,5 @@
+https://pythonim.ru/libraries/biblioteka-matplotlib-v-python
+
+https://pythonru.com/biblioteki/struktury-dannyh-v-pandas
+
+https://pythobyte.com/introduction-to-data-visualization-in-python-with-pandas-9f8fe4ec/
